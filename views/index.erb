@@ -1,0 +1,16 @@
+<table>
+	<tbody>
+	<% current.each_pair do |k, v| %>
+		<tr>
+			<th><%= k %></th>
+			<td><%= v %></td>
+		</tr>
+	<% end %>
+	</tbody>
+</table>
+<hr />
+<a href="/delete">DELETE</a><br />
+<hr />
+<% tl.each_with_index do |r, i| %>
+	<li><a href="/change?id=<%= i %>"><%= r.values.join(' ') %></a></li>
+<% end %>
